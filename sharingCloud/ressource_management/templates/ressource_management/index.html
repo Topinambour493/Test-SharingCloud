@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ressource_management</title>
+</head>
+<body>
+    {% if latest_ressource_list %}
+    <ul>
+    {% for ressource in latest_ressource_list %}
+        <li><a href="/ressource_management/{{ ressource.id }}/">{{ ressource.type }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No ressource_management are available.</p>
+    {% endif %}
+</body>
+</html>
