@@ -10,7 +10,7 @@
     {% if latest_ressource_list %}
     <ul>
     {% for ressource in latest_ressource_list %}
-        <li><a href="/ressource_management/{{ ressource.id }}/">{{ ressource.type }}</a></li>
+        <li><a href="{% url 'ressource_management:detail' ressource.id %}">{{ ressource.type }}</a></li>
     {% endfor %}
     </ul>
     {% else %}
