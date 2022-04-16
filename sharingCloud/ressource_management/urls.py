@@ -4,9 +4,9 @@ from . import views
 
 app_name = 'ressource_management'
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('car', views.car, name='car'),
-    path('<int:ressource_id>/', views.detail, name='detail'),
-    path('form_new_ressource', views.form_new_ressource, name='form_new_ressource'),
-    path('add_ressource', views.add_ressource, name='add_ressource'),
+    path('', views.IndexView.as_view(), name='index'),
+    path('<int:pk>/read', views.DetailView.as_view(), name='detail'),
+    path('add', views.CreateView.as_view(), name='add'),
+    path('<int:pk>/update', views.UpdateView.as_view(), name='update'),
+    path('<int:pk>/delete', views.DeleteView.as_view(), name='delete')
 ]
