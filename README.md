@@ -26,13 +26,11 @@ Pour ajouter, modifier et supprimer des ressources, il faut avoir un compte admi
 Pour se créer un compte admin, entrez dans le terminal, toujours au niveau de _repo_/sharingCloud :
 
 Windows :
-
 ```
 py manage.py createsuperuser
 ```
 
 UNIX :
-
 ```
 python manage.py createsuperuser
 ```
