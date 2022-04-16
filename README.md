@@ -17,10 +17,12 @@ Windows :
 ```
 py manage.py runserver
 ```
+
 UNIX :
 ```
 python manage.py runserver
 ```
+
 <br/>
 Pour ajouter, modifier et supprimer des ressources, il faut avoir un compte admin.
 Pour se créer un compte admin, entrez dans le terminal, toujours au niveau de _repo_/sharingCloud :
