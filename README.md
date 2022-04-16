@@ -2,13 +2,11 @@
 
 Pour lancer le projet pour la première fois, il faut se rendre dans le répértoire _repo_/sharingCloud puis executer la commande permettant de migrer les modeles dans la base de données :
 Windows :
-
 ```
 py manage.py migrate
 ```
 
 UNIX :
-
 ```
 python manage.py migrate
 ```
