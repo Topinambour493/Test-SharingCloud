@@ -10,13 +10,13 @@ from .models import Ressource
 
 class IndexView(generic.ListView):
     template_name = 'ressource_management/index.html'
-    context_object_name = 'latest_ressource_list'
     def get_queryset(self):
         return Ressource.objects.all()
 
 class DetailView(generic.DetailView):
     model = Ressource
     template_name = 'ressource_management/detail.html'
+    
 
 class CreateView(generic.CreateView):
     model = Ressource
