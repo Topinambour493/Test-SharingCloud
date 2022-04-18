@@ -11,6 +11,10 @@
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" name="sumbit"> 
-    </form> 
+    </form>
+    <div>
+        <span>Pas encore inscrit ?</span>
+        <a href="{% url 'authentication:register' %}"><button>Inscription</button></a>
+    </div>
 </body>
 </html>

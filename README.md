@@ -1,40 +1,49 @@
 # Test-SharingCloud
 
-Pour lancer le projet pour la première fois, il faut se rendre dans le répértoire _repo_/sharingCloud puis executer la commande permettant de migrer les modeles dans la base de données :
+Ce projet est un site de gestions de ressources, on peut acceder à la liste des ressources et voir le détail de chacunes d'elles.
+Il y a un système d'authentification, seuls les personnes connectés peuvent se connecter au site.
+Seuls les admins peuvent ajouter, modifier et supprimer des ressources.
+
+## Premier lancement
+
+Dès qu'il faut executer une commande contenant `manage.py`, il faut se rendre dans le répértoire _repo_/sharingCloud  (là où se situe le fichier ) :
+
+__Lancement des migrations :__
 Windows :
-```
-py manage.py migrate
-```
+```py manage.py migrate```
 
 UNIX :
-```
-python manage.py migrate
-```
+```python manage.py migrate```
 
-<br/>
-Pour lancer le serveur, executez toujours dans _repo_/sharingCloud :
+__Lancement du serveur :__
 Windows :
-```
-py manage.py runserver
-```
+```py manage.py runserver```
 
 UNIX :
-```
-python manage.py runserver
-```
+```python manage.py runserver```
 
-<br/>
-Pour ajouter, modifier et supprimer des ressources, il faut avoir un compte admin.
-Pour se créer un compte admin, entrez dans le terminal, toujours au niveau de _repo_/sharingCloud :
+### Admins
+
+__Création d'un compte admin :__
 
 Windows :
-```
-py manage.py createsuperuser
-```
+```py manage.py createsuperuser```
 
 UNIX :
-```
-python manage.py createsuperuser
-```
+```python manage.py createsuperuser```
 
-Il faut ensuite se rendre sur la page dédié aux admins, pour cela, entrez à la fin de l'url du site : "admin".
+__Transformer un user en admin :__
+
+Windows :
+```py manage.py user_to_superuser username```
+
+UNIX :
+```python manage.py user_to_superuser username```
+
+__Transformer un admin en user:__
+
+Windows :
+```py manage.py superuser_to_user username```
+
+UNIX :
+```python manage.py superuser_to_user username```

@@ -9,13 +9,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LoginView , LogoutView 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-class LogoutView(LogoutView):
-    template_name = 'authentication/logout.html'
-
-class SignUp(CreateView):
+class RegisterView(CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy("authentication:login")
-    template_name = "authentication/signup.html"
+    template_name = "authentication/register.html"
 
 class LoginView(LoginView):
     template_name = 'authentication/login.html'

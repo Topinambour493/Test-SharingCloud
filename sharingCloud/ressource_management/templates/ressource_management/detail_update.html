@@ -7,10 +7,12 @@
     <title>ressource_management</title>
 </head>
 <body>
+    <a href="{% url 'authentication:logout' %}"><button>Deconnexion</button></a>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Modifier">
     </form>
+    <a href="{% url 'ressource_management:maxi' ressource.id %}"><button>Supprimer la ressource</button></a>
 </body>
 </html>

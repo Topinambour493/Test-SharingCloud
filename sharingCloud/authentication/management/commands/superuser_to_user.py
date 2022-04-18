@@ -2,7 +2,7 @@ from django.core.management.base import BaseCommand, CommandError, CommandParser
 from django.contrib.auth.models import User
 
 class Command(BaseCommand):
-    help="remove the administrator right to the user to which corresponds the username given in argument."
+    help="Remove the administrator right to the user to which corresponds the username given in argument."
     def add_arguments(self, parser):
         parser.add_argument('username',type=str)
 

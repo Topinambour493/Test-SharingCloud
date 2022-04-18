@@ -12,5 +12,9 @@
         {{form}}
         <input type="submit" value="Register">
     </form>
+    <div>
+        <span>Déjà inscrit ?</span>
+        <a href="{% url 'authentication:login' %}"><button>Connexion</button></a>
+    </div>
 </body>
 </html>

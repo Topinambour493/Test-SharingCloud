@@ -13,11 +13,12 @@
     {% if ressource_list %}
     <ul>
     {% for ressource in ressource_list %}
-        <li><a href="{% url 'ressource_management:detail' ressource.id %}">{{ ressource.label }}</br>{{ ressource.type }}</a></li>
+        <li><a href="{% url 'ressource_management:update' ressource.id %}">{{ ressource.label }}</br>{{ ressource.type }}</a></li>
     {% endfor %}
     </ul>
     {% else %}
         <p>No ressource_management are available.</p>
     {% endif %}
+    <a href="{% url 'ressource_management:add' %}"><button>Ajouter une ressource</button></a>
 </body>
 </html>

@@ -4,6 +4,7 @@
 *.pyc
 __pycache__
 ressources.sqlite3
+db.sqlite3
 media
 
 # Backup files # 
