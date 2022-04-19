@@ -13,6 +13,6 @@
         {{ form.as_p }}
         <input type="submit" value="Modifier">
     </form>
-    <a href="{% url 'ressource_management:maxi' ressource.id %}"><button>Supprimer la ressource</button></a>
+    <a href="{% url 'ressource_management:delete' ressource.id %}"><button>Supprimer la ressource</button></a>
 </body>
 </html>
