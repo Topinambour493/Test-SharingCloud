@@ -1,3 +1,89 @@
-li a {
-    color: blueviolet;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 98%;
+    align-items: center;
+    padding: 10px;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    max-width:96vw;
+    max-height: calc( 90vh - 95px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form, fieldset , fieldset > * {
+    padding:8px;
+}
+
+li{
+    box-sizing: border-box;
+    border: 2px solid black;
+    margin: 5px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+li:hover{    
+    border: 5px solid black;
+    padding:1px;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+    padding:5px;
+    border: 1px solid black;
+}
+
+button{
+    cursor: pointer;
+    padding:8px;
+}
+
+form,ul,ol{
+    margin-bottom: 2vh;
+}
+
+.title{
+    font-size: 1.1em;
+}
+
+a{
+    text-decoration:none;
+    color: black;
+}
+
+footer{
+    align-self: center;
+    padding: 10px;
 }

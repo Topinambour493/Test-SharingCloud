@@ -5,14 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ressource_management</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ressource_management/style.css' %}">
 </head>
 <body>
-    <a href="{% url 'authentication:logout' %}"><button>Deconnexion</button></a>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Modifier">
-    </form>
-    <a href="{% url 'ressource_management:delete' ressource.id %}"><button>Supprimer la ressource</button></a>
+    <header>
+        <a class="logout" href="{% url 'authentication:logout' %}"><button>Deconnexion</button></a>
+        <div class="username">{{ user }}</div>
+    </header>
+    <main>
+        <form method="post">
+            {% csrf_token %}
+            <fieldset>
+                <legend><h1>Modification ressource</h1></legend>
+                {{ form.as_p }}
+                <input type="submit" value="Modifier">
+            </fieldset>
+        </form>
+        <a href="{% url 'ressource_management:delete' ressource.id %}"><button>Supprimer la ressource</button></a>
+    </main>
+    <footer></footer>
 </body>
 </html>

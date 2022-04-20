@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ressource_management</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ressource_management/style.css' %}">
 </head>
 <body>
-    <a href="{% url 'authentication:logout' %}"><button>Deconnexion</button></a>
-    type : {{ ressource.type }}<br/>
-    localisation : {{ ressource.localization }}<br/>
-    label : {{ ressource.label }}<br/>
-    capacité : {{ ressource.people_capacity }} personnes<br/>
-    <form method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Supprimer">
-    </form>
+    <header>
+        <a class="logout" href="{% url 'authentication:logout' %}"><button>Deconnexion</button></a>
+        <div class="username">{{ user }}</div>
+    </header>
+    <main>
+        type : {{ ressource.type }}<br/>
+        localisation : {{ ressource.localization }}<br/>
+        label : {{ ressource.label }}<br/>
+        capacité : {{ ressource.people_capacity }} personnes<br/>
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Supprimer">
+        </form>
+    </main>
 </body>
 </html>

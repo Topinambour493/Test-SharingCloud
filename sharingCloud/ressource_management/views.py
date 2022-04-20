@@ -14,9 +14,7 @@ from .models import Ressource
 
 def redirectIndexView(request):
     if request.user.has_perms('admin') == True :
-        print("voiture")
         return redirect(reverse('ressource_management:index_admin'))
-    print("vélo")
     return redirect(reverse('ressource_management:index'))
 
 class IndexView(LoginRequiredMixin,ListView):

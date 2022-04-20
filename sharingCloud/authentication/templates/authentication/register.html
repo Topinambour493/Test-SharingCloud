@@ -5,16 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inscription</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'authentication/style.css' %}">
 </head>
 <body>
-    <form method="post">
-        {% csrf_token %}
-        {{form}}
-        <input type="submit" value="Register">
-    </form>
-    <div>
-        <span>Déjà inscrit ?</span>
-        <a href="{% url 'authentication:login' %}"><button>Connexion</button></a>
-    </div>
+    <main>
+        <form method="post">
+            {% csrf_token %}
+            <fieldset>
+                <legend><h1>Inscription</h1></legend>
+                {{form}}
+                <input type="submit" value="Register">
+            </fieldset>
+        </form>
+        <footer>
+            <span>Déjà inscrit ?</span>
+            <a href="{% url 'authentication:login' %}"><button>Connexion</button></a>
+        <footer>
+    </main>
 </body>
 </html>

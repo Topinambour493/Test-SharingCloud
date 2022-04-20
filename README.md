@@ -6,7 +6,7 @@ Seuls les admins peuvent ajouter, modifier et supprimer des ressources.
 
 ## Premier lancement
 
-Dès qu'il faut executer une commande contenant `manage.py`, il faut se rendre dans le répértoire _repo_/sharingCloud  (là où se situe le fichier ) :
+Dès qu'il faut executer une commande contenant `manage.py`, il faut se rendre dans le répértoire _repo_/sharingCloud  (là où se situe ce fichier ) :
 
 __Lancement des migrations :__
 Windows :
@@ -47,3 +47,10 @@ Windows :
 
 UNIX :
 ```python manage.py superuser_to_user username```
+
+### Améliorations possibles
+
+* Ajouter un système de filtres par nom, type et capacité.
+* Prédéfinir les types pour les associer à une ressource. Actuellement le type est un string à écrire manuellement pour chaque ressource.
+* Faire en sorte que le reste des infos s'affiche à la suite du nom et du type lors du clic sur une ressource dans la page index (uniquement pour les users). Actuellement, au clic, l'user est renvoyé sur la page détail de la ressource.
+* Ajouter des seeders pour les ressources.

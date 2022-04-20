@@ -9,16 +9,29 @@
     <link rel="stylesheet" type="text/css" href="{% static 'ressource_management/style.css' %}">
 </head>
 <body>
-    <a href="{% url 'authentication:logout' %}"><button>Deconnexion</button></a>
-    {% if ressource_list %}
-    <ul>
-    {% for ressource in ressource_list %}
-        <li><a href="{% url 'ressource_management:update' ressource.id %}">{{ ressource.label }}</br>{{ ressource.type }}</a></li>
-    {% endfor %}
-    </ul>
-    {% else %}
-        <p>No ressource_management are available.</p>
-    {% endif %}
-    <a href="{% url 'ressource_management:add' %}"><button>Ajouter une ressource</button></a>
+    <header>
+        <a class="logout" href="{% url 'authentication:logout' %}"><button>Deconnexion</button></a>
+        <div><h1>Ressources</h1></div>
+        <div class="username">{{ user }}</div>
+    </header>
+    <main>
+        {% if ressource_list %}
+        <ul>
+        {% for ressource in ressource_list %}
+            <li>
+                <a href="{% url 'ressource_management:update' ressource.id %}">
+                    <div class="title">{{ ressource.label }}</div>
+                    <div class="type">{{ ressource.type }}</div>
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+        {% else %}
+            <p>Il n'y a pas de ressources.</p>
+        {% endif %}
+    </main>
+    <footer>
+        <a href="{% url 'ressource_management:add' %}"><button>Ajouter une ressource</button></a>
+    </footer>
 </body>
 </html>
